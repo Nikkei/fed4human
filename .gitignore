@@ -1,0 +1,19 @@
+# local
+.env
+
+data/nikkei/*
+!data/nikkei/.gitkeep
+data/wikinews/*
+!data/wikinews/.gitkeep
+model/*
+!model/.gitkeep
+
+checkpoints/
+finetuned/
+outputs/
+results/
+
+# byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class

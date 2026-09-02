@@ -1,0 +1,11 @@
+tokenizer:
+  _target_: transformers.AutoTokenizer.from_pretrained
+  pretrained_model_name_or_path: ${pretrained_model_name_or_path}
+  padding_side: left
+
+dataset:
+  _convert_: all  # Convert everything to primitive containers
+  _target_: datasets.load_dataset
+  path: json
+  split: test
+  download_mode: force_redownload  # disable a cache

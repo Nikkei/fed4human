@@ -1,0 +1,12 @@
+defaults:
+  - base
+  - _self_
+  - data_module: wikinews
+  - model: AutoModelForCausalLM_4bit
+  - peft: gemma-4
+  - training_arguments: gemma-4-E4B-it_qlora
+
+pretrained_model_name_or_path: google/gemma-4-E4B-it
+model_id: gemma-4-E4B-it
+
+finetuning_setting: qlora

@@ -1,0 +1,8 @@
+defaults:
+  - base
+  - _self_
+  - data_module: wikinews
+
+model_id: gpt-5.4
+num_shot: 6
+setting: ${num_shot}-shot

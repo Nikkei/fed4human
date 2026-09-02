@@ -1,0 +1,8 @@
+{
+  "raw_data_path": "./data/wikinews/20260601.jsonl",
+  "antonym_dict_path": null,
+  "pretrained_t5_name_or_path": "retrieva-jp/t5-xl",
+  "ner_model_name": "ja_ginza_bert_large",
+  "w2v_model_path": "./model/entity_vector/entity_vector.model.txt",
+  "pretrained_llm_name_or_path": "tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.1"
+}

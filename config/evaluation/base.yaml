@@ -1,0 +1,18 @@
+seed: 0
+
+pretrained_model_name_or_path:
+model_id: 
+
+num_shot: 0
+setting: 
+
+torch_dtype: bfloat16
+
+max_tokens: 512
+
+out_file: ${wrap_path_string:outputs/${hydra:runtime.choices.data_module}_${model_id}_${setting}.jsonl}
+
+# cf. https://hydra.cc/docs/configure_hydra/workdir/
+hydra:
+  job:
+    chdir: false

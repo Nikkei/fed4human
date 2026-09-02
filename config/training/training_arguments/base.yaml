@@ -1,0 +1,20 @@
+_target_: trl.SFTConfig
+
+# for transformers.TrainingArguments
+output_dir: ${wrap_path_string:checkpoints/${hydra:runtime.choices.data_module}/${model_id}/${finetuning_setting}/${seed}}
+max_grad_norm: 0.3
+learning_rate: 1e-4
+weight_decay: 0.01
+lr_scheduler_type: cosine
+warmup_ratio: 0.01
+logging_steps: 16
+save_steps: 512
+seed: ${seed}
+bf16: true
+bf16_full_eval: true
+optim: paged_adamw_32bit
+report_to: none
+
+# for trl.SFTConfig
+max_length: 768
+# packing: true

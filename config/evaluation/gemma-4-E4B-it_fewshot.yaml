@@ -1,0 +1,12 @@
+defaults:
+  - base
+  - _self_
+  - data_module: wikinews
+  - model: AutoModelForCausalLM
+
+model_id: gemma-4-E4B-it
+num_shot: 6
+setting: ${num_shot}-shot
+pretrained_model_name_or_path: google/gemma-4-E4B-it
+
+batch_size: 4

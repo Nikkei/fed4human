@@ -1,0 +1,18 @@
+seed: 0
+
+torch_dtype: bfloat16
+
+effective_batch_size: ${get_effective_batch_size:${training_arguments.per_device_train_batch_size},${training_arguments.gradient_accumulation_steps}}
+
+# cf. https://hydra.cc/docs/configure_hydra/workdir/
+hydra:
+  job:
+    chdir: false
+  # configuration for a single run
+  run:
+    dir: "${training_arguments.output_dir}/single"
+  # configuration for multi-run
+  sweep:
+    # interpolation doesn't work
+    dir: "./sweep"
+    subdir: "${hydra.job.num}"

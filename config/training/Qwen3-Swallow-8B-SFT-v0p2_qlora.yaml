@@ -1,0 +1,12 @@
+defaults:
+  - base
+  - _self_
+  - data_module: wikinews
+  - model: AutoModelForCausalLM_4bit
+  - peft: default
+  - training_arguments: Qwen3-Swallow-8B-SFT-v0p2_qlora
+
+pretrained_model_name_or_path: tokyotech-llm/Qwen3-Swallow-8B-SFT-v0.2
+model_id: Qwen3-Swallow-8B-SFT-v0p2
+
+finetuning_setting: qlora

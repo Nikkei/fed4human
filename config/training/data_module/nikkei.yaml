@@ -1,0 +1,10 @@
+defaults:
+  - base
+  - _self_
+
+dataset:
+  data_files:
+    train:
+      - data/nikkei/synthetic_train_samples.jsonl
+
+few_shot_examples_file: ${wrap_path_string:data/nikkei/few-shot_examples.jsonl}

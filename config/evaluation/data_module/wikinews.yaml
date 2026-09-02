@@ -1,0 +1,9 @@
+defaults:
+  - base
+  - _self_
+
+dataset:
+  data_files:
+    test: ./data/wikinews/synthetic_test_samples.jsonl
+
+few_shot_examples_file: ${wrap_path_string:./data/wikinews/few-shot_examples.jsonl}

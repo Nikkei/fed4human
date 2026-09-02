@@ -1,0 +1,11 @@
+defaults:
+  - base
+  - _self_
+  - data_module: wikinews
+  - model: AutoModelForCausalLM
+
+model_id: gemma-4-E4B-it
+setting: fullpara
+pretrained_model_name_or_path: finetuned/${hydra:runtime.choices.data_module}/${model_id}/${setting}
+
+batch_size: 4

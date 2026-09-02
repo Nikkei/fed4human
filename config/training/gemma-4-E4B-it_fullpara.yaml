@@ -1,0 +1,12 @@
+defaults:
+  - base
+  - _self_
+  - data_module: wikinews
+  - model: AutoModelForCausalLM
+  - training_arguments: gemma-4-E4B-it_fullpara
+
+pretrained_model_name_or_path: google/gemma-4-E4B-it
+model_id: gemma-4-E4B-it
+
+finetuning_setting: fullpara
+deepspeed: config/training/deepspeed/zero_stage_3.json

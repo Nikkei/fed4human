@@ -1,0 +1,25 @@
+--index-url "https://download.pytorch.org/whl/cu124"
+--extra-index-url "https://pypi.org/simple"
+
+-e .
+accelerate~=1.6.0
+gensim~=4.3.0
+# ipadic==1.0.0
+fugashi[unidic-lite]~=1.5.0
+mecab-python3~=1.0.0
+pandas~=2.2.0
+pykakasi~=2.3.0
+scipy<1.13.0  # gensim causes ImportError: cannot import name 'triu' from 'scipy.linalg' if scipy >= 1.13.0
+
+mozcpy~=0.2.0
+namedivider-python~=0.4.0
+protobuf~=3.20.0  # cf. "Downgrade the protobuf package to 3.20.x or lower."
+regex~=2025.9.1
+sentencepiece~=0.2.0  # to convert a slow tokenizer to a fast one
+spacy~=3.8.5
+torch~=2.6.0
+transformers<4.31.0
+
+cupy-cuda12x~=13.6.0; sys_platform == "linux"
+# ja_ginza_bert_large==5.2.0
+ja_ginza_bert_large @ https://github.com/megagonlabs/ginza/releases/download/v5.2.0/ja_ginza_bert_large-5.2.0b1-py3-none-any.whl --hash=sha256:cd788f852701ace399c442bd96a37d81935678f4269491d5b4ba33ab5f199688

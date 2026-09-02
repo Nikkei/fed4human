@@ -1,0 +1,12 @@
+defaults:
+  - base
+  - _self_
+  - data_module: wikinews
+  - model: AutoModelForCausalLM
+
+model_id: Qwen3-Swallow-8B-SFT-v0p2
+num_shot: 6
+setting: ${num_shot}-shot
+pretrained_model_name_or_path: tokyotech-llm/Qwen3-Swallow-8B-SFT-v0.2
+
+batch_size: 4

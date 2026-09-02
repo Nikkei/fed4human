@@ -1,0 +1,12 @@
+defaults:
+  - base
+  - _self_
+  - data_module: wikinews
+  - model: AutoModelForCausalLM
+  - training_arguments: Qwen3-Swallow-8B-SFT-v0p2_fullpara
+
+pretrained_model_name_or_path: tokyotech-llm/Qwen3-Swallow-8B-SFT-v0.2
+model_id: Qwen3-Swallow-8B-SFT-v0p2
+
+finetuning_setting: fullpara
+deepspeed: config/training/deepspeed/zero_stage_3.json
